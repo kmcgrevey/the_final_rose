@@ -4,5 +4,7 @@ Rails.application.routes.draw do
   
   get '/bachelorettes/:bachelorette_id/contestants', to: 'contestants#index'
   get '/contestants/:id', to: 'contestants#show'
+
+  get '/outings/:id', to: 'outings#show'
   
 end

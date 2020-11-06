@@ -1,0 +1,6 @@
+<h1><%= @contestant.name %></h1>
+<p>Season: <%= @contestant.bachelorette.season_number %></p>
+<p>Description: <%= @contestant.bachelorette.season_desc %></p>
+<% @contestant.outings.each do |outing| %>
+  <%= link_to("#{outing.name}", "/outings/#{outing.id}") %>
+<% end %>
