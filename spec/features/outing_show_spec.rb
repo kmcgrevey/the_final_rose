@@ -28,7 +28,7 @@ RSpec.describe "As visitor on Outing's show page", type: :feature do
   end
   
   
-  it "I see that outings name, location, and date" do
+  xit "I see that outings name, location, and date" do
     expect(page).to have_content(@out2.name)
     expect(page).to_not have_content(@out1.name)
     expect(page).to have_content(@out2.location)
