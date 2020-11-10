@@ -3,9 +3,9 @@ class Outing < ApplicationRecord
   has_many :contestants, through: :contestant_outings
 
   def names_list
-    list = contestants +
-          (contestants.map { |cont| cont.bachelorette }).uniq
-    list.map { |person| person.name }
+    contestants.pluck(:name) +
+    Bachelorette.find(contestants.pluck(:bachelorette_id).uniq)
+                .pluck(:name)
   end
 
   def body_count
