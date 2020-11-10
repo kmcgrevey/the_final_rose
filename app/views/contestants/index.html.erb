@@ -6,7 +6,9 @@
   <p>Hometown: <%= contestant.hometown %></p>
 <% end %>
 
-<h2 id="hometowns">Hometowns:</h2>
-<% @bach.cont_hometowns.each do |town| %>
-  <p><%= town %></p>
-<% end %>
+<h2>Hometowns:</h2>
+<section id="hometowns">
+  <% @bach.cont_hometowns.each do |town| %>
+    <p><%= town %></p>
+  <% end %>
+</section>

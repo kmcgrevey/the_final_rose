@@ -4,5 +4,9 @@ class Bachelorette <ApplicationRecord
   def avg_cont_age
     contestants.average(:age)
   end
+
+  def cont_hometowns
+    contestants.pluck(:hometown).uniq
+  end
   
 end

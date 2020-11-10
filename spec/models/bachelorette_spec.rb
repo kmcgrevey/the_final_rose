@@ -32,12 +32,13 @@ RSpec.describe Bachelorette, type: :model do
     end
 
     it 'avg_cont_age' do
-      expect(@bach1.avg_cont_age).to eq(38.5)
+      expect(@bach1.avg_cont_age).to eq(34)
     end
 
     it 'cont_hometowns' do
       expect(@bach1.cont_hometowns).to include("Irving, TX",
                                                "Destin, FL")
+      expect(@bach1.cont_hometowns.count).to eq(2)
       expect(@bach1.cont_hometowns).to_not include("Carmel, IN")
     end
   end
