@@ -21,7 +21,7 @@ RSpec.describe Bachelorette, type: :model do
     end
 
     it 'avg_cont_age' do
-      expect(@bach1.avg_cont_age).to eq(33.5)
+      expect(@bach1.avg_cont_age).to eq(38.5)
     end
   end
 end
