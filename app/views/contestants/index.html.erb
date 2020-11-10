@@ -5,3 +5,8 @@
   <p>Age: <%= contestant.age %></p>
   <p>Hometown: <%= contestant.hometown %></p>
 <% end %>
+
+<h2 id="hometowns">Hometowns:</h2>
+<% @bach.cont_hometowns.each do |town| %>
+  <p><%= town %></p>
+<% end %>
