@@ -26,4 +26,8 @@ RSpec.describe "When I visit bachelorette show page", type: :feature do
     expect(page).to have_content("#{@bach1.name} contestants:")
     expect(page).to_not have_content(@bach2.name)
   end
+
+  it "I see average age of all her contestants" do
+    expect(page).to have_content("Average Age of Contestants: 29.5")
+  end
 end
